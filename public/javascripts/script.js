@@ -26,4 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
             `)
             .openPopup();
     });
-})
+
+    $('#tablaPuntos').DataTable({
+        "paging": true,
+        "lengthMenu": [[5, 10, 20, -1], [5, 10, 20, "Todos"]],
+        "searching": true,
+        "language": {
+            "lengthMenu": "Registros por pagina _MENU_",
+            "zeroRecords": "No se encontraron resultados",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros disponibles",
+            "infoFiltered": "(filtrado de _MAX_ registros totales)",
+            "search": "Buscar:",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        }
+    });;
+});
+
